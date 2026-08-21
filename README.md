@@ -4,6 +4,9 @@
 
 > A Windows desktop operations workspace for SSH, Telnet, raw TCP, serial devices, SFTP, port forwarding, and approval-driven AI assistance.
 
+<img width="2226" height="1272" alt="03" src="https://github.com/user-attachments/assets/44ffc921-ea21-4f5a-b8f8-e373d39b9962" />
+
+
 [中文](#中文说明) | [English](#english)
 
 GoSSH is a local-first desktop application built with Wails, Go, Svelte, and xterm.js. It brings interactive terminal sessions, SSH file management, saved connections, local knowledge retrieval, MCP tools, and a checkpointed AI Agent into one operational workspace.
