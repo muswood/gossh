@@ -289,10 +289,7 @@ wails build -platform windows/amd64
 - 默认每条 Agent 命令需要审批。可在安全配置中开启“只读命令无需审批”，但写入、删除、未知命令和 Agent SFTP 读取仍需审批。
 - 长时间远端命令由 Agent 等待完成，用户可在终端中按 `Ctrl-C` 中断；不要对正常耗时命令默认套用短时间 `timeout`。
 
-### 归属
 
-- Owner: muswood
-- Email: mumu920@outlook.com
 
 ## English
 
