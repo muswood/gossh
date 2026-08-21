@@ -1,0 +1,18 @@
+// owner: muswood | Email: mumu920@outlook.com
+import {defineConfig} from 'vite'
+import {svelte} from '@sveltejs/vite-plugin-svelte'
+import tailwindcss from '@tailwindcss/vite'
+import path from 'path'
+
+export default defineConfig({
+  base: './',
+  plugins: [
+    svelte(),
+    tailwindcss(),
+  ],
+  resolve: {
+    alias: {
+      $lib: path.resolve('./src/lib'),
+    },
+  },
+})

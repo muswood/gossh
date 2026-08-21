@@ -1,0 +1,148 @@
+/* owner: muswood | Email: mumu920@outlook.com */
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: cyber-night --default, aurora-light --preferslight;
+}
+@plugin "daisyui/theme" {
+  name: "cyber-night";
+  default: true;
+  prefersdark: true;
+  color-scheme: dark;
+  --color-base-100: oklch(16% 0.020 265);
+  --color-base-200: oklch(22% 0.025 265);
+  --color-base-300: oklch(31% 0.032 265);
+  --color-base-content: oklch(92% 0.010 260);
+  --color-primary: oklch(65% 0.250 270);
+  --color-primary-content: oklch(98% 0.002 260);
+  --color-secondary: oklch(80% 0.160 210);
+  --color-secondary-content: oklch(20% 0.030 210);
+  --color-accent: oklch(68% 0.230 300);
+  --color-accent-content: oklch(98% 0.002 300);
+  --color-neutral: oklch(25% 0.020 260);
+  --color-neutral-content: oklch(82% 0.010 260);
+  --color-info: oklch(75% 0.150 230);
+  --color-success: oklch(80% 0.200 150);
+  --color-warning: oklch(85% 0.180 80);
+  --color-error: oklch(70% 0.220 20);
+  --radius-box: 0.75rem;
+  --radius-field: 0.5rem;
+}
+
+@plugin "daisyui/theme" {
+  name: "aurora-light";
+  default: false;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: oklch(99% 0.003 260);
+  --color-base-200: oklch(97% 0.005 260);
+  --color-base-300: oklch(92% 0.008 260);
+  --color-base-content: oklch(22% 0.025 265);
+  --color-primary: oklch(55% 0.260 270);
+  --color-primary-content: oklch(98% 0.002 260);
+  --color-secondary: oklch(65% 0.160 210);
+  --color-accent: oklch(60% 0.240 300);
+  --radius-box: 0.75rem;
+  --radius-field: 0.5rem;
+}
+
+:root {
+  --font-mono: "JetBrains Mono", "Noto Sans SC", "Fira Code", monospace;
+  --font-ui: "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif;
+}
+
+[data-theme="cyber-night"] {
+  --app-bg: #0f172a;
+  --app-bg-soft: #111c31;
+  --app-panel: rgba(15, 23, 42, 0.64);
+  --app-panel-strong: rgba(18, 28, 48, 0.9);
+  --app-panel-muted: rgba(30, 41, 59, 0.6);
+  --app-border: rgba(255, 255, 255, 0.06);
+  --app-border-strong: rgba(255, 255, 255, 0.12);
+  --app-text: #e2e8f0;
+  --app-text-strong: #f8fafc;
+  --app-muted: #64748b;
+  --app-subtle: #475569;
+  --app-accent: #a5b4fc;
+  --app-accent-strong: #6366f1;
+  --app-accent-soft: rgba(99, 102, 241, 0.15);
+  --app-hover: rgba(255, 255, 255, 0.05);
+  --app-shadow: 0 4px 24px rgba(0, 0, 0, 0.22);
+}
+
+[data-theme="aurora-light"] {
+  --app-bg: #f5f7fb;
+  --app-bg-soft: #eef3fb;
+  --app-panel: rgba(255, 255, 255, 0.78);
+  --app-panel-strong: rgba(255, 255, 255, 0.94);
+  --app-panel-muted: rgba(241, 245, 249, 0.82);
+  --app-border: rgba(15, 23, 42, 0.1);
+  --app-border-strong: rgba(15, 23, 42, 0.16);
+  --app-text: #1e293b;
+  --app-text-strong: #0f172a;
+  --app-muted: #64748b;
+  --app-subtle: #94a3b8;
+  --app-accent: #4f46e5;
+  --app-accent-strong: #4338ca;
+  --app-accent-soft: rgba(79, 70, 229, 0.11);
+  --app-hover: rgba(15, 23, 42, 0.05);
+  --app-shadow: 0 8px 28px rgba(15, 23, 42, 0.08);
+}
+
+* {
+  font-family: var(--font-ui);
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: oklch(60% 0.24 270 / 0.25);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(65% 0.25 270 / 0.5);
+}
+
+html, body, #app { height: 100%; margin: 0; padding: 0; overflow: hidden; }
+
+.glass {
+  background: oklch(22% 0.025 265 / 0.7);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid oklch(100% 0 0 / 0.06);
+}
+.glass-strong {
+  background: oklch(18% 0.030 265 / 0.85);
+  backdrop-filter: blur(24px) saturate(200%);
+  border: 1px solid oklch(100% 0 0 / 0.08);
+}
+.neon-border {
+  box-shadow: 0 0 20px oklch(65% 0.25 270 / 0.15),
+              inset 0 0 20px oklch(65% 0.25 270 / 0.05);
+  border: 1px solid oklch(65% 0.25 270 / 0.3);
+}
+.btn-glow {
+  transition: all 0.2s ease;
+}
+.btn-glow:hover {
+  box-shadow: 0 0 20px oklch(65% 0.25 270 / 0.4),
+              0 0 40px oklch(65% 0.25 270 / 0.2);
+  transform: translateY(-1px);
+}
+
+.bg-gradient-subtle {
+  background:
+    radial-gradient(ellipse at top left, oklch(65% 0.25 270 / 0.08), transparent 50%),
+    radial-gradient(ellipse at bottom right, oklch(68% 0.23 300 / 0.06), transparent 50%);
+}
+
+.xterm-container {
+  width: 100%;
+  height: 100%;
+}
+.xterm-container .xterm {
+  padding: 8px;
+  height: 100%;
+}
+.xterm-container .xterm-viewport {
+  overflow-y: auto !important;
+}
